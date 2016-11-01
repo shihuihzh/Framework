@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>con.hzh</groupId>
+    <groupId>com.hzh</groupId>
     <artifactId>Framework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -69,6 +69,12 @@
             <version>5.1.39</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>com.querydsl</groupId>-->
+            <!--<artifactId>querydsl-jpa</artifactId>-->
+            <!--<version>4.1.4</version>-->
+        <!--</dependency>-->
+
 
     </dependencies>
 
@@ -83,6 +89,30 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>com.mysema.maven</groupId>-->
+                <!--<artifactId>apt-maven-plugin</artifactId>-->
+                <!--<version>1.1.3</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>process</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<outputDirectory>target/generated-sources/java</outputDirectory>-->
+                            <!--<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<dependencies>-->
+                    <!--<dependency>-->
+                        <!--<groupId>com.querydsl</groupId>-->
+                        <!--<artifactId>querydsl-apt</artifactId>-->
+                        <!--<version>4.1.4</version>-->
+                    <!--</dependency>-->
+                <!--</dependencies>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 

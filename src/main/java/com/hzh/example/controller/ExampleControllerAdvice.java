@@ -1,5 +1,7 @@
 package com.hzh.example.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
@@ -18,9 +20,12 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice(basePackageClasses = ExampleController.class)
 public class ExampleControllerAdvice {
 
+    Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @ExceptionHandler(Exception.class)
     @ResponseBody
     ResponseEntity<?> handleControllerException(HttpServletRequest request, Throwable ex) {
+        logger.error("请求出错：", ex);
         HttpStatus status = getStatus(request);
         return new ResponseEntity<>(new CustomErrorType(status.value(), ex.getMessage()), status);
     }
