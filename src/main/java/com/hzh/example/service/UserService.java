@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.Predicate;
+
 /**
  * 测试sevice
  * Created by Zhanhao Wong on 2016/11/1.

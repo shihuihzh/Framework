@@ -51,7 +51,7 @@ public class ExampleUserController {
     @RequestMapping("/find")
     @ResponseBody
     public Object find(int page, int size) {
-        return this.userService.findPageUser(new QPageRequest(page, size, new QSort()));
+        return this.userService.findPageUser(new PageRequest(page, size));
     }
 
 }
